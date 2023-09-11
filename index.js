@@ -23,11 +23,13 @@
 //     'https://unsplash.com/photos/kcRFW-https://images.unsplash.com/photo-1603792582751-c73976204e1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGhlYWx0aHklMjBsaWZlc3R5bGV8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60'
 // ];
 const images = [
-    './yoga/logobalance.png',
-    './yoga/img1.jpeg',
-    './yoga/imag2.jpeg',
-    './yoga/imag3.jpeg',
-    './yoga/imag4.jpeg',
+    './yoga/pic6.png',
+    './yoga/pic1.png',
+    './yoga/pic2.png',
+    './yoga/pic3.png',
+    './yoga/pic4.png',
+    './yoga/pic5.png',
+
 
 ];
 const n = images.length;

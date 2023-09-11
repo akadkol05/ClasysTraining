@@ -5,7 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About us</title>
     <style>
-       
+       /* Set a background for the entire page */
+body {
+    background-image: url('yoga/background.png'); /* Replace with your image URL */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* This keeps the background fixed while scrolling */
+    background-position: center center;
+    color: #fff; /* Set text color to contrast with the background */
+}
+
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -30,7 +39,6 @@ h2 {
     display: flex;
 }
 .about-us{
-    background-color: beige;
     height: 100vh;
     margin-top: auto;
 
@@ -80,6 +88,117 @@ a:hover {
     background-color: rgb(133, 138, 206);
     border-radius: 30px;
 }
+/* navbar styling */
+header {
+    background-color: #23446b;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+
+   
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+
+}
+
+
+.contact-details {
+    text-align: left;
+    display: flexbox;
+    gap: 10px;
+    margin-top: 2px;
+}
+
+.contact-details p {
+    margin-bottom: 5px;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    display: flex;
+}
+
+.email-icon {
+    display: flex;
+    gap: 2px;
+}
+
+.phone-icon {
+    display: flex;
+    gap: 2px;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-media {
+        margin-bottom: 20px;
+    }
+
+
+}
 /* Responsive styles (You can add responsive styles as needed) */
 
 @media screen and (max-width: 768px) {
@@ -100,6 +219,20 @@ a:hover {
     </style>
 </head>
 <body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#"><img src="yoga/logo.jpeg" alt="Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html" target="_blank">Login</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
     <section class="about-us">
         <div class="container">
             <h1>About Us</h1>
@@ -123,5 +256,26 @@ a:hover {
             
         </div>
     </section>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="contact-details">
+                <div class="email-icon">
+                    <div><ion-icon name="mail-outline"></ion-icon></div>
+                    <p>Email: example@example.com</p>
+                </div>
+               <div class="phone-icon">
+                <div><ion-icon name="call-outline"></ion-icon></div>
+                <p>Phone: +1 (123) 456-7890</p>
+               </div>
+               
+            </div>
+        </div>
+        <div class="copyright">
+            <ion-icon name="logo-closed-captioning"></ion-icon>
+            &copy; 2023 Your Website Name. All Rights Reserved.
+        </div>
+    </footer>
 </body>
 </html>

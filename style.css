@@ -1,10 +1,10 @@
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-header {
+/* header {
     padding: 0 2.8rem;
     height: 6rem;
     display: flex;
@@ -46,11 +46,7 @@ header {
     color: rgb(195, 34, 48);
 }
 
-.footer {
-    background-color: rgb(232, 229, 229);
-    display: flex;
-    height: 5rem;
-}
+
 
 .moblie-navbar {
     width: 2.3rem;
@@ -64,7 +60,123 @@ header {
 
 .moblie-navbar[name="close-circle-outline"] {
     display: none;
+} */
+
+/* navbar styling */
+header {
+    background-color: #23446b;
+    color: #fff;
+    padding: 10px 0;
 }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+
+}
+
+
+.contact-details {
+    text-align: left;
+    display: flexbox;
+    gap: 10px;
+    margin-top: 2px;
+}
+
+.contact-details p {
+    margin-bottom: 5px;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 14px;
+    display: flex;
+}
+
+.email-icon {
+    display: flex;
+    gap: 2px;
+}
+
+.phone-icon {
+    display: flex;
+    gap: 2px;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-media {
+        margin-bottom: 20px;
+    }
+
+
+}
+
 
 /* carousal styling */
 .canvas {
@@ -145,24 +257,4 @@ header {
 
 .carousal-dot.active {
     background-color: white;
-}
-
-@media(max-width:62em) {
-    .mobile-navbar-btn {
-        display: block;
-        color: black;
-    }
-
-    .navbar {
-        display: none;
-        height: 100vh;
-        width: 100%;
-
-    }
-
-    .navbar-list {
-        flex-direction: column;
-    }
-
-
 }
