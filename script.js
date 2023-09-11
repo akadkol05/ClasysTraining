@@ -110,7 +110,10 @@ document.getElementById('registration-form').addEventListener('submit', function
         alert('Please enter a valid email address.');
         isValid = false;
     }
+    if (isValid) {
+        alert('Registered successfully');
 
+    }
 
 
 
