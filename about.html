@@ -6,19 +6,28 @@
     <title>About us</title>
     <style>
        /* Set a background for the entire page */
-body {
-    background-image: url('yoga/background.png'); /* Replace with your image URL */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed; /* This keeps the background fixed while scrolling */
-    background-position: center center;
-    color: #fff; /* Set text color to contrast with the background */
+       * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+.about-us {
+    background-image: url('yoga/background.png'); 
+ background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-position: center center;
+    color: #fff; 
+}
+/* Move the "Healthy Lifestyle" text to the left margin */
+
 
 .container {
     max-width: 800px;
     margin: 0 auto;
     justify-content: center;
+
 }
 
 /* Heading styles */
@@ -69,10 +78,6 @@ p {
     margin-bottom: 5px;
 }
 
-.team-member p {
-    color: #121111;
-}
-
 
 /* Links styles */
 a {
@@ -85,30 +90,48 @@ a:hover {
 }
 
 .team{
-    background-color: rgb(133, 138, 206);
     border-radius: 30px;
 }
-/* navbar styling */
-header {
-    background-color: #23446b;
-    color: #fff;
-    padding: 10px 0;
-}
 
-.navbar {
+
+/* navbar styling */
+
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    background-color: #23446b;
+    color: #fff;
+    padding: 10px 20px;
+}
 
-   
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+
 }
 
 .logo img {
-    width: 100px;
-    height: auto;
+    width: 80px;
+    height: 70px;
+    margin-right: 5px;
 }
+
+
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
 
 .nav-links {
     list-style: none;
@@ -142,50 +165,18 @@ header {
     }
 }
 
-
-
-.footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-
-}
-
 .footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1200px;
-
+    text-align: center;
+    padding: 10px 0;
+    background-color: #23446b;
+    color: white;
 }
 
-
-.contact-details {
-    text-align: left;
-    display: flexbox;
-    gap: 10px;
-    margin-top: 2px;
+.footer-icons img {
+    width: 30px;
+    margin: 0 10px;
 }
 
-.contact-details p {
-    margin-bottom: 5px;
-}
-
-.copyright {
-    margin-top: 20px;
-    font-size: 14px;
-    display: flex;
-}
-
-.email-icon {
-    display: flex;
-    gap: 2px;
-}
-
-.phone-icon {
-    display: flex;
-    gap: 2px;
-}
 
 @media (max-width: 768px) {
     .footer-content {
@@ -193,13 +184,9 @@ header {
         text-align: center;
     }
 
-    .social-media {
-        margin-bottom: 20px;
-    }
 
 
 }
-/* Responsive styles (You can add responsive styles as needed) */
 
 @media screen and (max-width: 768px) {
     .container {
@@ -220,22 +207,24 @@ header {
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="#"><img src="yoga/logo.jpeg" alt="Logo"></a>
-            </div>
+        <div class="logo">
+            <img src="yoga/logo.jpeg" alt="" /> Healthy Lifestyle
+
+        </div>
+        <div class="navbar">
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="login.html" target="_blank">Login</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="index.html" target="_blank">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="login.html" >Login</a></li>
+                <li><a href="signup.html" >Sign up</a></li>
+                <li><a href="contact.html">Contact us</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+</header>
     
     <section class="about-us">
         <div class="container">
-            <h1>About Us</h1>
+            <h1>About us</h1>
             <p>Welcome to Yoga & Diet, your ultimate destination for achieving a balanced and healthy lifestyle through yoga and mindful eating. Our mission is to empower individuals to enhance their physical and mental well-being through the practice of yoga and the adoption of a nutritious diet.</p>
 <div class="team">
     <h2>Our Team</h2>
@@ -258,24 +247,21 @@ header {
     </section>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <footer class="footer">
+    <footer>
         <div class="footer-content">
-            <div class="contact-details">
-                <div class="email-icon">
-                    <div><ion-icon name="mail-outline"></ion-icon></div>
-                    <p>Email: example@example.com</p>
-                </div>
-               <div class="phone-icon">
-                <div><ion-icon name="call-outline"></ion-icon></div>
-                <p>Phone: +1 (123) 456-7890</p>
-               </div>
-               
+          <div class="footer-icons">
+            <div class="email-icon">
+                <p><ion-icon name="mail-outline"> </ion-icon> Email: example@example.com</p>
             </div>
+           <div class="phone-icon">
+            <p><ion-icon name="call-outline"></ion-icon>Phone: +1 (123) 456-7890</p>
+           </div>
+          </div>
+          <p>
+            Contact us for queries.
+          </p>
+          <p>&copy; MyProject All Rights Reserved.</p>
         </div>
-        <div class="copyright">
-            <ion-icon name="logo-closed-captioning"></ion-icon>
-            &copy; 2023 Your Website Name. All Rights Reserved.
-        </div>
-    </footer>
+      </footer>
 </body>
 </html>

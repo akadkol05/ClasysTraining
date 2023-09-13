@@ -69,7 +69,41 @@ select {
 }
 
 
+#passwordWarning {
+    color: red;
+}
 
+#ageWarning {
+    color: red;
+}
+
+#fnameWarning {
+    color: red;
+}
+
+#lnameWarning {
+    color: red;
+}
+
+#phoneWarning {
+    color: red;
+}
+
+#emailWarning {
+    color: red;
+}
+
+#addressWarning {
+    color: red;
+}
+
+#usernameWarning {
+    color: red;
+}
+
+#cpasswordWarning {
+    color: red;
+}
 
 .form-group input[type="radio"] {
     display: inline-block;
@@ -98,26 +132,46 @@ button:hover {
     background-color: #0056b3;
 }
 
-/* navbar styling */
-header {
-    background-color: #23446b;
-    color: #fff;
-    padding: 10px 0;
-}
 
-.navbar {
+
+/* navbar styling */
+
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    background-color: #23446b;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+
 }
 
 .logo img {
-    width: 100px;
-    height: auto;
+    width: 80px;
+    height: 70px;
+    margin-right: 5px;
 }
+
+
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
 
 .nav-links {
     list-style: none;
@@ -151,49 +205,16 @@ header {
     }
 }
 
-
-
-.footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-
-}
-
 .footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1200px;
-
+    text-align: center;
+    padding: 10px 0;
+    background-color: #23446b;
+    color: white;
 }
 
-
-.contact-details {
-    text-align: left;
-    display: flexbox;
-    gap: 10px;
-    margin-top: 2px;
-}
-
-.contact-details p {
-    margin-bottom: 5px;
-}
-
-.copyright {
-    margin-top: 20px;
-    font-size: 14px;
-    display: flex;
-}
-
-.email-icon {
-    display: flex;
-    gap: 2px;
-}
-
-.phone-icon {
-    display: flex;
-    gap: 2px;
+.footer-icons img {
+    width: 30px;
+    margin: 0 10px;
 }
 
 
@@ -203,9 +224,6 @@ header {
         text-align: center;
     }
 
-    .social-media {
-        margin-bottom: 20px;
-    }
 
 
 }

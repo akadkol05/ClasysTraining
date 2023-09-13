@@ -1,27 +1,18 @@
-
 const stateDropdown = document.getElementById('state');
 const cityDropdown = document.getElementById('city');
-const registrationForm = document.getElementById('registration-form');
-const usernameInput = document.getElementById('username');
-const passwordInput = document.getElementById('password');
-const errorDisplay = document.getElementById('error-message');
-
 
 const cityOptions = {
     state1: ['Vasco', 'Margao', 'Panjim'],
-    state2: ['Mumbai', 'Pune', 'Kholapur'],
+    state2: ['Mumbai', 'Pune', 'Kolhapur'],
     state3: ['Thiruvananthapuram', 'Kochi', 'Kannur', 'Kozhikode'],
-
+    // Add more cities for other states
 };
-
 
 function populateCityDropdown() {
     const selectedState = stateDropdown.value;
     const cities = cityOptions[selectedState] || [];
 
-
     cityDropdown.innerHTML = '';
-
 
     cities.forEach(city => {
         const option = document.createElement('option');
@@ -31,99 +22,168 @@ function populateCityDropdown() {
     });
 }
 
-
+// Add an event listener to the state dropdown to trigger city population
 stateDropdown.addEventListener('change', populateCityDropdown);
+
+// Trigger the population of city options when the page loads
+populateCityDropdown();
+
 
 // validation
 
-document.getElementById('registration-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-    // form validation logic here
-
-    const firstName = document.getElementById('first-name').value.trim();
-    const lastName = document.getElementById('last-name').value.trim();
-    const dateOfBirth = document.getElementById('date-of-birth').value;
-    const age = parseInt(document.getElementById('age').value, 10);
-    const gender = document.querySelector('input[name="gender"]:checked');
-    const phone = document.getElementById('phone').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const address = document.getElementById('address').value.trim();
-    const state = document.getElementById('state').value;
-    const city = document.getElementById('city').value;
-    const username = document.getElementById('username').value.trim();
-    const password = document.getElementById('password').value;
-    const confirmPassword = document.getElementById('confirm-password').value;
-
-    if (username === '') {
-        displayError('Please enter a username.');
-        return;
-    }
-
-    if (password === '') {
-        displayError('Please enter a password.');
-        return;
-    }
-
-    // Validation logic
-    let isValid = true;
-
-    // Check first name
-    if (firstName === '') {
-        alert('Please enter your first name.');
-        isValid = false;
-    }
-
-    // Check last name
-    if (lastName === '') {
-        alert('Please enter your last name.');
-        isValid = false;
-    }
-
-    // Check date of birth
-    if (dateOfBirth === '') {
-        alert('Please enter your date of birth.');
-        isValid = false;
-    }
-
-    // Check age (not below 18)
-    if (isNaN(age) || age < 18) {
-        alert('You must be at least 18 years old to register.');
-        isValid = false;
-    }
-
-    // Check gender
-    if (!gender) {
-        alert('Please select your gender.');
-        isValid = false;
-    }
-
-    // Check phone number
-    const phonePattern = /^\d{10}$/; // Change this pattern based on your phone number format
-    if (!phone.match(phonePattern)) {
-        alert('Please enter a valid 10-digit phone number.');
-        isValid = false;
-    }
-
-    // Check email address
-    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    if (!email.match(emailPattern)) {
-        alert('Please enter a valid email address.');
-        isValid = false;
-    }
-    if (isValid) {
-        alert('Registered successfully');
-
-    }
-
-
-
-});
-
-// Function to display an error message
-function displayError(message) {
-    errorDisplay.textContent = message;
-    errorDisplay.style.color = 'red';
+// Validation functions
+function validateRegistration() {
+    return (
+        validateFname() &&
+        validateLname() &&
+        validateAge() &&
+        validatePhone() &&
+        validateEmail() &&
+        validateAddress() &&
+        validateUsername() &&
+        validatePassword() &&
+        validateConfirmPassword()
+    );
 }
 
+function validateContact() {
+    return validateFname() && validateLname() && validateEmail();
+}
 
+function validateFname() {
+    var fname = document.getElementById("first-name");
+    var fnameWarning = document.getElementById("fnameWarning");
 
+    if (fname.value.length !== 0) {
+        fnameWarning.style.visibility = "hidden";
+        fname.style.borderColor = "green";
+        return true;
+    } else {
+        fnameWarning.style.visibility = "visible";
+        fname.style.borderColor = "red";
+        return false;
+    }
+}
+
+function validateLname() {
+    var lname = document.getElementById("last-name");
+    var lnameWarning = document.getElementById("lnameWarning");
+
+    if (lname.value.length !== 0) {
+        lnameWarning.style.visibility = "hidden";
+        lname.style.borderColor = "green";
+        return true;
+    } else {
+        lnameWarning.style.visibility = "visible";
+        lname.style.borderColor = "red";
+        return false;
+    }
+}
+
+function validateAge() {
+    var age = document.getElementById("age");
+    var ageWarning = document.getElementById("ageWarning");
+
+    if (age.value >= 18 && age.value < 100) {
+        ageWarning.style.visibility = "hidden";
+        age.style.borderColor = "green";
+        return true;
+    } else {
+        ageWarning.style.visibility = "visible";
+        age.style.borderColor = "red";
+        return false;
+    }
+}
+
+function validatePhone() {
+    var phone = document.getElementById("phone");
+    var phoneWarning = document.getElementById("phoneWarning");
+
+    if (phone.value.length === 10) {
+        phoneWarning.style.visibility = "hidden";
+        phone.style.borderColor = "green";
+        return true;
+    } else {
+        phoneWarning.style.visibility = "visible";
+        phone.style.borderColor = "red";
+        return false;
+    }
+}
+
+function validateEmail() {
+    var email = document.getElementById("email");
+    var emailWarning = document.getElementById("emailWarning");
+    var regEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (regEmail.test(email.value)) {
+        emailWarning.style.visibility = "hidden";
+        email.style.borderColor = "green";
+        return true;
+    } else {
+        emailWarning.style.visibility = "visible";
+        email.style.borderColor = "red";
+        return false;
+    }
+}
+
+function validateAddress() {
+    var address = document.getElementById("address");
+    var addressWarning = document.getElementById("addressWarning");
+
+    if (address.value.length >= 6) {
+        addressWarning.style.visibility = "hidden";
+        address.style.borderColor = "green";
+        return true;
+    } else {
+        addressWarning.style.visibility = "visible";
+        address.style.borderColor = "red";
+        return false;
+    }
+}
+
+function validateUsername() {
+    var username = document.getElementById("username");
+    var usernameWarning = document.getElementById("usernameWarning");
+
+    if (username.value.length !== 0) {
+        usernameWarning.style.visibility = "hidden";
+        username.style.borderColor = "green";
+        return true;
+    } else {
+        usernameWarning.style.visibility = "visible";
+        username.style.borderColor = "red";
+        return false;
+    }
+}
+
+function validatePassword() {
+    var password = document.getElementById("password");
+    var passwordWarning = document.getElementById("passwordWarning");
+    var regPassword = /^[a-zA-Z0-9]{6,}$/;
+
+    if (regPassword.test(password.value)) {
+        passwordWarning.style.visibility = "hidden";
+        password.style.borderColor = "green";
+        return true;
+    } else {
+        passwordWarning.style.visibility = "visible";
+        password.style.borderColor = "red";
+        return false;
+    }
+}
+
+function validateConfirmPassword() {
+    var cpassword = document.getElementById("confirm-password");
+    var password = document.getElementById("password");
+    var cpasswordWarning = document.getElementById("cpasswordWarning");
+
+    if (validatePassword() && cpassword.value === password.value) {
+        cpasswordWarning.style.visibility = "hidden";
+        cpassword.style.borderColor = "green";
+        return true;
+    } else {
+        cpasswordWarning.style.visibility = "visible";
+        cpassword.style.borderColor = "red";
+        return false;
+    }
+}

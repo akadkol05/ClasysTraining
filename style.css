@@ -4,84 +4,44 @@
     box-sizing: border-box;
 }
 
-/* header {
-    padding: 0 2.8rem;
-    height: 6rem;
+/* navbar styling */
+
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(201, 235, 251);
-    color: black;
-
+    background-color: #23446b;
+    color: #fff;
+    padding: 10px 20px;
 }
 
 .logo {
-
-    height: 8rem;
-    width: 8rem;
-    border-radius: 20rem;
-    overflow: wrap;
-    padding: 1rem;
-
-}
-
-.navbar-list {
+    font-size: 24px;
+    font-weight: bold;
     display: flex;
-    gap: 4rem;
-    list-style: none;
-    text-decoration: none;
-    list-style: none;
-}
-
-.navbar-link {
-
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 1.2rem;
-
-}
-
-.navbar-link:hover,
-:active {
-    color: rgb(195, 34, 48);
-}
-
-
-
-.moblie-navbar {
-    width: 2.3rem;
-    height: 4rem;
-    color: black;
-}
-
-.mobile-navbar-btn {
-    background-color: transparent;
-}
-
-.moblie-navbar[name="close-circle-outline"] {
-    display: none;
-} */
-
-/* navbar styling */
-header {
-    background-color: #23446b;
-    color: #fff;
-    padding: 10px 0;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
 
 }
 
 .logo img {
-    width: 100px;
-    height: auto;
+    width: 80px;
+    height: 70px;
+    margin-right: 5px;
 }
+
+
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
 
 .nav-links {
     list-style: none;
@@ -115,50 +75,18 @@ header {
     }
 }
 
-
-
-.footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-
-}
-
 .footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 1200px;
-
+    text-align: center;
+    padding: 10px 0;
+    background-color: #23446b;
+    color: white;
 }
 
-
-.contact-details {
-    text-align: left;
-    display: flexbox;
-    gap: 10px;
-    margin-top: 2px;
+.footer-icons img {
+    width: 30px;
+    margin: 0 10px;
 }
 
-.contact-details p {
-    margin-bottom: 5px;
-}
-
-.copyright {
-    margin-top: 20px;
-    font-size: 14px;
-    display: flex;
-}
-
-.email-icon {
-    display: flex;
-    gap: 2px;
-}
-
-.phone-icon {
-    display: flex;
-    gap: 2px;
-}
 
 @media (max-width: 768px) {
     .footer-content {
@@ -166,9 +94,6 @@ header {
         text-align: center;
     }
 
-    .social-media {
-        margin-bottom: 20px;
-    }
 
 
 }
