@@ -6,7 +6,8 @@
     <title>About us</title>
     <style>
        /* Set a background for the entire page */
-       * {
+       
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,7 +15,7 @@
 
 .about-us {
     background-image: url('yoga/background.png'); 
- background-size: cover;
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed; 
     background-position: center center;
@@ -22,11 +23,11 @@
 }
 /* Move the "Healthy Lifestyle" text to the left margin */
 
-
 .container {
     max-width: 800px;
     margin: 0 auto;
     justify-content: center;
+    height: 100vh;
 
 }
 
@@ -54,7 +55,7 @@ h2 {
 }
 
 /* Paragraph styles */
-p {
+.container P {
     font-size: 20px;
     line-height: 1.5;
     margin-bottom: 15px;
@@ -117,8 +118,19 @@ header {
     width: 80px;
     height: 70px;
     margin-right: 5px;
+    border-radius: 50%;
+}
+.footer-content {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #23446b;
+    color: white;
 }
 
+.footer-icons img {
+    width: 30px;
+    margin: 0 10px;
+}
 
 .navbar {
     display: flex;
@@ -165,17 +177,7 @@ header {
     }
 }
 
-.footer-content {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #23446b;
-    color: white;
-}
 
-.footer-icons img {
-    width: 30px;
-    margin: 0 10px;
-}
 
 
 @media (max-width: 768px) {
@@ -243,7 +245,8 @@ header {
             <p>We believe that a harmonious blend of yoga and a well-balanced diet can transform lives. Our vision is to create a community of individuals who are committed to holistic health, mindfulness, and self-improvement.</p>
 
             
-        </div>
+  
+    </div>
     </section>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -251,10 +254,10 @@ header {
         <div class="footer-content">
           <div class="footer-icons">
             <div class="email-icon">
-                <p><ion-icon name="mail-outline"> </ion-icon> Email: example@example.com</p>
+                <p><ion-icon name="mail-outline"> </ion-icon> Email: healthylifstyle@gmail.com</p>
             </div>
            <div class="phone-icon">
-            <p><ion-icon name="call-outline"></ion-icon>Phone: +1 (123) 456-7890</p>
+            <p><ion-icon name="call-outline"></ion-icon>Phone: 984567211</p>
            </div>
           </div>
           <p>

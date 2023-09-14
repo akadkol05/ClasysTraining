@@ -24,9 +24,8 @@ body {
 }
 
 .heading {
-    background-color: #007BFF;
-    color: #fff;
-    padding: 5px;
+    color: #131111;
+    padding: 10px;
     height: 60px;
     width: 100%;
     border-top-left-radius: 20px;
@@ -43,10 +42,10 @@ h1 {
 
 /* Form group styles */
 .form-group {
-    margin-bottom: 20px;
+
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 label {
@@ -70,39 +69,39 @@ select {
 
 
 #passwordWarning {
-    color: red;
+    visibility: hidden;
 }
 
 #ageWarning {
-    color: red;
+    visibility: hidden;
 }
 
 #fnameWarning {
-    color: red;
+    visibility: hidden;
 }
 
 #lnameWarning {
-    color: red;
+    visibility: hidden;
 }
 
 #phoneWarning {
-    color: red;
+    visibility: hidden;
 }
 
 #emailWarning {
-    color: red;
+    visibility: hidden;
 }
 
 #addressWarning {
-    color: red;
+    visibility: hidden;
 }
 
 #usernameWarning {
-    color: red;
+    visibility: hidden;
 }
 
 #cpasswordWarning {
-    color: red;
+    visibility: hidden;
 }
 
 .form-group input[type="radio"] {
@@ -157,6 +156,7 @@ header {
     width: 80px;
     height: 70px;
     margin-right: 5px;
+    border-radius: 50%;
 }
 
 

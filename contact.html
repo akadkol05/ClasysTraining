@@ -96,6 +96,7 @@ header {
     width: 80px;
     height: 70px;
     margin-right: 5px;
+    border-radius: 50%;
 }
 
 
@@ -166,6 +167,12 @@ header {
 
 
 }
+.warning {
+    visibility: hidden;
+}
+
+
+
     </style>
 </head>
 <body>
@@ -187,37 +194,42 @@ header {
     <div>
         <div class="container">
             <h1 style=" margin-top: 0px; border-radius: 10px; position: relative; padding-top: 0px;">Contact Us</h1>
-            <form id="contact-form">
+            <form id="contact-form" onsubmit="return validateContact()">
                 <div class="form-group">
                     <label for="name">Name *</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" required  onfocusout="validateFname()">
+                    <span id="nameWarning" class="warning">Please enter a valid name.</span>
                 </div>
                 <div class="form-group">
                     <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" required onfocusout="validateEmail()">
+                    <span id="emailWarning" class="warning">Please enter a valid email address.</span>
                 </div>
                 <div class="form-group">
                     <label for="subject">Subject *</label>
-                    <input type="text" id="subject" name="subject" required>
+                    <input type="text" id="subject" name="subject" required onfocusout="validateSubject()">
+                    <span id="subjectWarning" class="warning">Please enter a valid subject.</span>
                 </div>
                 <div class="form-group">
                     <label for="message">Message *</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <textarea id="message" name="message" rows="4" required onfocusout="validateMessage()"></textarea>
+                    <span id="mssgWarning" class="warning">Please enter a valid message.</span>
                 </div>
                 <div class="form-group">
                     <button type="submit">Submit</button>
                 </div>
-    </div>
+    </div> 
+    <script src="contact.js"> </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <footer>
         <div class="footer-content">
           <div class="footer-icons">
             <div class="email-icon">
-                <p><ion-icon name="mail-outline"> </ion-icon> Email: example@example.com</p>
+                <p><ion-icon name="mail-outline"> </ion-icon> Email: healthylifstyle@gmail.com</p>
             </div>
            <div class="phone-icon">
-            <p><ion-icon name="call-outline"></ion-icon>Phone: +1 (123) 456-7890</p>
+            <p><ion-icon name="call-outline"></ion-icon>Phone: 984567211</p>
            </div>
           </div>
           <p>
